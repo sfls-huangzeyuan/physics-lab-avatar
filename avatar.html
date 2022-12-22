@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>物理试验室头像生成器</title>
+	<link rel="icon" href="https://cdn.luogu.com.cn/upload/image_hosting/qywh2rvi.png">
+	<style>
+		html, body 
+		{
+			height: 100%;
+			background-image: url("http://api.dujin.org/bing/1920.php");
+			background-repeat: no-repeat;
+			background-attachment:fixed;
+			background-position:50% 50%;
+			background-size: cover;
+		}
+		.code
+		{
+    		background-color: #000;
+		}
+	</style>
+
+（举个例子，替换序列号即可）
+（可选参数 small round      tiny round     full）
+request head  
+GET /users/avatars/61f3/ef/90/b7abd4c334225550/2.jpg!small.round HTTP/1.1
+Referer: https://www.turtlesim.com/
+Host: physics-static-cn.turtlesim.com
+</head>
+<body>
+	<script type="text/javascript">
+		function click()
+		{
+			alert('hello');
+			window.open('http://physics-static-cn.turtlesim.com/users/avatars/61f3/ef/90/b7abd4c334225550/1.jpg!small.round');
+			var request_header='physics-static-cn.turtlesim.com/users/avatars/';
+			var request_body_string=document.getElementById('user_number');
+			var request_body=request_body_string.substring(0,4)+'/'+request_body_string.substring(4,2)+'/'+request_body_string.substring(6,2)+'/'+request_body_string.substring(8)+'/'+'2.jpg!small.round';
+		}
+	</script>
+	<input type="text" placeholder="请输入用户序列号" id="user_number"/>
+	<button onclick="click()" type="button">查询</button>
+</body>
+</html>
